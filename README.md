@@ -1,4 +1,3 @@
-ᴱᴺ
 # Explanation of `pom.xml`
 
 This Maven project includes several key sections that are important to understand when working with Java and external dependencies.
@@ -43,5 +42,3 @@ Plugins allow Maven to perform additional tasks such as compiling code, running 
 - **Lombok and testing libraries**: Help write cleaner code and automate tests efficiently.
 
 ---
-
-ᴱˢ
