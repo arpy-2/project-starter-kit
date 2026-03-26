@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- POM model version -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Project coordinates -->
+    <groupId>org.ies.tierno</groupId>                                       <!-- Organization or group -->
+    <artifactId>project</artifactId>                                        <!-- Project name -->
+    <version>1.0-SNAPSHOT</version>                                         <!-- Project version -->
+
+    <!-- Project properties -->
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>                   <!-- Java source version -->
+        <maven.compiler.target>21</maven.compiler.target>                   <!-- Java target version -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  <!-- Project encoding -->
+        <lombok.version>1.18.34</lombok.version>                            <!-- Lombok dependency version -->
+    </properties>
+
+    <!-- Project dependencies -->
+    <dependencies>
+        <!-- Logging (SLF4J + Log4j) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>                                    <!-- Dependency group -->
+            <artifactId>slf4j-log4j12</artifactId>                          <!-- Dependency name -->
+            <version>2.0.13</version>                                       <!-- Dependency version -->
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>                            <!-- Dependency group -->
+            <artifactId>lombok</artifactId>                                 <!-- Dependency name -->
+            <version>${lombok.version}</version>                            <!-- Dependency version -->
+            <scope>provided</scope>                                         <!-- Scope: provided at compile time -->
+        </dependency>
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>                            <!-- Dependency group -->
+            <artifactId>junit-jupiter-engine</artifactId>                   <!-- Dependency name -->
+            <version>5.13.0-M2</version>                                    <!-- Dependency version -->
+            <scope>test</scope>                                             <!-- Scope: test only -->
+        </dependency>
+
+        <!-- Mockito -->
+        <dependency>
+            <groupId>org.mockito</groupId>                                  <!-- Dependency group -->
+            <artifactId>mockito-core</artifactId>                           <!-- Dependency name -->
+            <version>5.11.0</version>                                       <!-- Dependency version -->
+            <scope>test</scope>                                             <!-- Scope: test only -->
+        </dependency>
+
+        <!-- Mockito JUnit 5 integration -->
+        <dependency>
+            <groupId>org.mockito</groupId>                                  <!-- Dependency group -->
+            <artifactId>mockito-junit-jupiter</artifactId>                  <!-- Dependency name -->
+            <version>5.11.0</version>                                       <!-- Dependency version -->
+            <scope>test</scope>                                             <!-- Scope: test only -->
+        </dependency>
+    </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Maven Surefire Plugin: runs unit tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>                 <!-- Plugin group -->
+                <artifactId>maven-surefire-plugin</artifactId>              <!-- Plugin name -->
+                <version>3.2.5</version>                                    <!-- Plugin version -->
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
